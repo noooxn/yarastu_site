@@ -1,0 +1,364 @@
+@import "bourbon"
+@import "vars.sass"
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: "RobotoRegular", sans-serif
+	overflow-x: hidden
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+	font-family: "OpenSansLight", sans-serif
+	font-weight: normal
+
+h1,
+.h1
+	font-size: em(41)
+	line-height: 1.2
+
+.ishome
+	h1
+		margin-top: 0
+
+.ishome
+	h2
+		margin-top: 0
+		margin-bottom: 12px
+		line-height: 1.2
+
+h2,
+.h2
+	font-size: em(36)
+
+h3,
+.h3
+	font-size: em(26)
+	line-height: 1.2
+
+h4
+	font-size: em(20)
+
+h5
+	font-size: em(15)
+
+h6
+	font-size: em(10)
+
+a 
+	color: $accent
+	outline: none !important
+
+.hidden
+	display: none
+
+.main-head
+	background-image: url(../img/bg_soft.jpg)
+	background-size: cover
+	background-position: top center
+	min-height: 100vh
+	overflow: hidden
+
+.mnu-line
+	padding-top: 48px
+
+.logo
+	display:block
+	width: 120px
+	img
+		width: 120px
+		max-width: 120px
+
+nav, .header-content
+	ul
+		list-style-type:none
+		padding: 0
+		margin: 0
+	li
+		display: inline-block
+
+.main-mnu
+	font-size: em(16px)
+	text-align: center
+	> ul
+		> li
+			> a
+				display: block
+				padding: 20px 15px
+				color: darken(#6c7177, 15%)
+				+mt(.5s)
+				&:hover
+					color: #39434f
+			&.active
+				a
+					color: #39434f
+					text-decoration: underline
+
+.phone
+	text-align: right
+	color: darken(#797e85, 20%)
+	font-family: "Exo 2", sans-serif
+	font-size: em(21px)
+	padding: 13px 0
+	.fas
+		font-size: em(17px)
+		vertical-align: middle
+		margin-right: 5px
+
+.header-content
+	.responsive-img
+		padding: 15% 0 0% 
+		width: 560px
+		max-width: 100%
+	padding: 9% 0 5%
+	.fab
+		font-size: em(25)
+	.vk
+		margin-top: 8%
+	.fa-vk
+		text-align: center
+		margin-right: 1px
+	.fa-instagram
+		text-align:center
+		margin-right: 7px
+	.fa-whatsapp
+		text-align:center
+		margin-right: 7px
+
+	.links
+		font-family: "OpenSansLight", sans-serif
+		font-weight: normal
+		font-size: em(27)
+		line-height: 1.5
+		color: darken(#6c7177, 10%)
+		+mt(.5s)
+		&:hover
+			color: #39434f
+		&.active
+			color: #39434f
+
+ul.home-list
+		margin-top: 40px
+		li
+			display: block
+			color: darken(#6c7177, 10%)
+			text-transform: uppercase
+			font-family: "OpenSansSemibold"
+			font-size: em(18)
+			line-height: 1.8
+
+.button
+	display: inline-block
+	border: none
+	background-color: $btn
+	color: #fff
+	font-size: em(14px)
+	letter-spacing: 2px
+	text-transform: uppercase
+	padding: 13px 34px
+	border-radius: 3px
+	box-shadow: 0 4px 0 #0E9C4B
+	transition: all .15s ease
+	text-align: center
+	&:hover, &:focus
+		color: #fff
+		text-decoration: none
+	&:hover
+		background-color: #18CB65
+	&:active
+		background-color: #0E9C4B
+
+.button-small
+	padding: 9px 30px
+	font-size: em(13px)
+	background-color: darken($accent, 6%)
+	box-shadow: 0px 4px darken($accent, 13%)
+	&:hover
+		background-color: lighten($accent, 3%)
+		box-shadow: 0px 4px darken($accent, 5%)
+	&:active, &:focus
+		background-color: darken($accent, 6%)
+		box-shadow: 0px 4px darken($accent, 6%)
+
+.button-gray
+	background-color: #e8e8e8
+	color: #222
+	box-shadow: 0px 4px darken(#e8e8e8, 13%)
+
+.responsive-img
+	max-width: 100%
+
+.mouse-icon
+	border: 2px solid $dark
+	border-radius: 16px
+	height: 40px
+	width: 24px
+	z-index: 10
+	opacity: 0.7
+	display: inline-block
+	cursor: pointer
+	.wheel
+		animation-name: drop
+		animation-duration: 1s
+		animation-timing-function: linear
+		animation-delay: 0s
+		animation-iteration-count: infinite
+		animation-play-state: running
+		position: relative
+		border-radius: 10px
+		background: $dark
+		width: 2px
+		height: 6px
+		top: 4px
+		margin-left: auto
+		margin-right: auto
+
+.trn
+	position: relative
+	background-image: url(../img/technical/triangle.svg)
+	background-size: cover
+	background-position: top center
+	height: 98px
+	width: 100%
+	left: 0px
+	bottom: -40px
+
+
+@-webkit-keyframes drop
+	0%
+		top: 5px
+		opacity: 0
+
+	30%
+		top: 10px
+		opacity: 1
+
+	100%
+		top: 25px
+		opacity: 0
+
+
+@keyframes drop
+	0%
+		top: 5px
+		opacity: 0
+
+	30%
+		top: 10px
+		opacity: 1
+
+	100%
+		top: 25px
+		opacity: 0
+
+.mw-wrapper
+	text-align: center
+	padding-top: 20%
+
+
+.toggle-mnu 
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 14px
+
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: $dark
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px)
+
+.toggle-mnu
+	position: absolute
+	top: 7px
+	right: 15px
+
+.hidden-mnu
+	background-color: $dark
+	display: none
+
+	li
+		display: block
+	> ul
+		padding: 20px 0
+		>li
+			color: #8386c6
+			&.active
+				a
+					text-decoration: underline 
+					color: #ffff
+			>a
+				color: #ffff
+				&:hover
+					color: #ffff
+					background-color: $accent2
+					text-decoration: none
+.s-wide 
+	padding: 70px 0
+	h2
+		text-align: center
+		margin-top: 0
+
+.s-dark
+	background-color: $dark
+	color: #fff
+.s-adv
+	padding: 34px 0 5px
+.s-adv-item
+	font-size: em(15px)
+	font-family: "OpenSansRegular", sans-serif
+	color: #9da0b5
+	margin-bottom: 30px
+	h3
+		margin: 0
+		font-size: em(20px)
+		color: #cedaef
+		line-height: em(21px)
+		font-family: "Exo2Bold", sans-serif
+		text-transform: uppercase
+		span
+			font-size: em(24px)
+			color: darken(#FFFDD5, 30%)
+	p
+		margin: 12px 0 0 
+
+.table
+	display: table
+	width: 100%
+	color: $accentContrast
+	i
+		font-size: em(30)
+.tr
+	display: table-row
+.td
+	display: table-cell
+	vertical-align: middle
+
+

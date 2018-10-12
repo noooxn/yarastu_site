@@ -1,0 +1,509 @@
+@import "bourbon"
+@import "vars.sass"
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+@import "app/libs/fontaws/fontawesome.scss"
+@import "app/libs/fontaws/fa-solid.scss"
+@import "app/libs/fontaws/fa-brands.scss"
+@import "app/libs/fontaws/fa-regular.scss"
+@import "app/libs/Magnific-Popup/magnific-popup.sass"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//Custom Styles Here
+.s-gray
+	background-color: #F8F8F8
+
+.home-gallery-wrap
+	a
+		&:hover, &:focus
+			text-decoration: none
+
+.galery-teaser-wrap
+	min-height: 360px
+	border: 7px solid $accentContrast
+	background-size: cover
+	position: relative
+	display: block
+	&:hover
+		text-decoration: none
+		&::before
+			opacity: .7
+	&::before
+		content: ''
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		background-color: $dark
+		opacity: .5
+		+mt(.5s)
+ .table 
+	 z-index: 2
+	 position: relative
+	 text-align: center
+	 height: 360px
+	 span
+		font-size: em(30)
+		color: $accentContrast
+		text-decoration: none
+		font-family: "OpenSansLight", sans-serif
+
+.teaser-triangle
+	position: absolute
+	top: 0
+	right: 0
+	font-size: em(24)
+	@include triangle(60px, $accentContrast, up-right)
+	i
+		color: $dark
+		position: absolute
+		top: -57px
+		right: 1px
+
+.inf-2-block
+	h2
+		font-size: em(36)
+		padding-top: 40px
+		padding-bottom: 10px
+		text-align: left
+	p
+		font-size: em(20)
+		font-family: "OpenSansRegular", sans-serif
+		line-height: 1.5
+	ul.home-list
+		i
+			font-size: em(19)
+			color: lighten($dark, 17%)
+			vertical-align: middle
+		.mailbox-icon
+			width: 28px
+			max-width: 28px
+		.fa-truck-loading
+			margin-right: 4px
+		.fa-car
+			margin-right: 7px
+			padding-left: 2px
+		.fa-phone-square
+			padding-bottom: 1px
+			margin-right: 8px
+			padding-left: 2px
+		.fa-shopping-basket
+			padding-bottom: 3px
+			margin-right: 6px
+		margin-top: 5px
+		padding: 0px 0
+		li
+			padding-top: 10px
+			text-transform: none
+			line-height: 1.5
+			font-size: em(18)
+			color: #666
+
+.home-gallery-wrap > a
+	display: none
+	&:first-child
+		display: block
+
+.mfp-gallery
+	.mfp-close
+		font-size: em(40)
+
+
+//Magnific-Popup Customize
+.mfp-ready .mfp-figure
+	opacity: 0
+.mfp-zoom-in
+	.mfp-figure, .mfp-iframe-holder .mfp-iframe-scaler
+		opacity: 0
+		transition: all 0.3s ease-out
+		transform: scale(0.95)
+	&.mfp-bg, .mfp-preloader
+		opacity: 0
+		transition: all 0.3s ease-out
+	&.mfp-image-loaded .mfp-figure
+		opacity: 1
+		transform: scale(1)
+	&.mfp-ready
+		.mfp-iframe-holder .mfp-iframe-scaler
+			opacity: 1
+			transform: scale(1)
+		&.mfp-bg, .mfp-preloader
+			opacity: 0.8
+	&.mfp-removing
+		.mfp-figure, .mfp-iframe-holder .mfp-iframe-scaler
+			transform: scale(0.95)
+			opacity: 0
+		&.mfp-bg, .mfp-preloader
+			opacity: 0
+
+.mfp-iframe-scaler
+	overflow: visible
+.mfp-zoom-out-cur
+	cursor: auto
+	.mfp-image-holder .mfp-close
+		cursor: pointer
+.mfp-preloader
+	width: 30px !important
+	height: 30px !important
+	background-color: $accent
+	opacity: 0.65
+	margin: 0 auto
+	animation: rotateplane 1.2s infinite ease-in-out
+@-webkit-keyframes rotateplane
+	0%
+		-webkit-transform: perspective(120px)
+	50%
+		-webkit-transform: perspective(120px) rotateY(180deg)
+	100%
+		-webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+@keyframes rotateplane
+	0%
+		transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+	50%
+		transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+	100%
+		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
+
+.s-grad
+	height: 20px
+	background: linear-gradient(to bottom, #f8f8f8, #ffffff)
+
+.s-delivery
+	padding: 60px 0 75px
+
+.item-vertical
+	margin-top: 60px
+	text-align: center
+	svg, img
+		width: 160px
+		height: auto
+	path
+		fill: $dark
+		+mt(.5s)
+	&:hover
+		.button
+			background-color: lighten($accent, 3%)
+			box-shadow: 0px 4px darken($accent, 5%)
+			color: #fff
+			&:active, &:focus
+				background-color: darken($accent, 6%)
+				box-shadow: 0px 4px darken($accent, 6%)
+		path
+			fill: darken($accent, 6%) !important
+		h3
+			&::before
+				background-color: darken($accent, 6%)
+				width: 40%
+				margin-left: -20%
+	h3
+		font-family: "OpenSansRegular", sans-serif
+		margin-top: 30px
+		margin-bottom: 30px
+		padding-bottom: 20px
+		position: relative
+		&::before
+			+mt(.5s)
+			content: ''
+			position: absolute
+			bottom: 0
+			height: 1px
+			width: 20%
+			left: 50%
+			margin-left: -10%
+			background-color: $dark
+
+.s-products
+	padding-top: 60px
+	padding-bottom: 60px
+	background-color: $dark
+	h2
+		margin-bottom: 60px
+
+.products
+	.col-lg-3
+		padding: 0
+	a
+		color: #666
+		text-decoration: none
+	.product-item
+		position: relative
+		display: block
+		overflow: hidden
+		border: 1px solid #000
+		img
+			+mt(.5s)
+		&:hover
+			img
+					transform: scale(1.1)
+			.product-item-content
+				opacity: 1
+				transform: scale(1)
+		&-content
+			position: absolute
+			top: 0
+			left: 0
+			padding-top: 30%
+			width: 100%
+			height: 100%
+			background-color: rgba(240, 255, 240, 0.75)
+			font-size: em(20)
+			text-align: center
+			opacity: 0
+			+mt(.5s)
+			transform: scale(1.1)
+			h4
+				font-family: "OpenSansSemiBold", sans-serif
+				margin: 0
+			i
+				color: rgba(65, 78, 91, 0.6)
+				font-size: em(23)
+
+.product-popup
+	position: relative
+	background-color: rgba(240, 255, 240, 0.6)
+	border: 1px solid #000
+	display: block
+	max-width: 1200px
+	margin: 3% auto 3%
+	padding: 0px 20px 0
+	text-align: center
+	.mfp-close
+		color: #000
+		right: 0px
+		top: 0px
+		font-size: em(40)
+	+mt(.25s)
+	.responsive-img
+		display: block
+		padding: 0px
+		border: 1px solid #000
+	.row, .col-sm-8, 
+		display: block
+	color: #666
+	h2
+		line-height: em(22)
+		margin-top: 10%
+		margin-bottom: 30px
+		text-align: left
+		color: #222
+	&-text
+		.col-sm-4
+			margin-bottom: 20px
+		text-align: left
+		line-height: em(30)
+		width: 90%
+		margin: auto
+		font-family: "OpenSansRegular", sans-serif
+		.col-sm-6
+			padding: 0
+		.p-text
+			font-size: em(20)
+			vertical-align: top 
+			&.wsnw
+				color: #222
+
+.wsnw
+	white-space: nowrap
+
+//mfp zoom animation
+.my-mfp-zoom-in
+	.product-popup
+		opacity: 0
+		transform: scale(0.8)
+	&.mfp-ready .product-popup
+		opacity: 1
+		transform: scale(1)
+	&.mfp-removing .product-popup
+		transform: scale(0.8)
+		opacity: 0
+	&.mfp-bg
+		opacity: 0
+		transition: opacity 0.3s ease-out
+	&.mfp-ready.mfp-bg
+		opacity: 0.8
+	&.mfp-removing.mfp-bg
+		opacity: 0
+
+*
+	transition: filter .25s ease
+.mfp-wrap ~ *
+	filter: blur(5px)
+
+.s-collections
+	padding-top: 60px
+	padding-bottom: 0px
+	h2
+		margin-bottom: 40px
+
+
+.carousel-wrap
+	margin: auto
+	.car-img-wrap
+		position: relative
+		svg, img
+			position: absolute
+			left: 45px
+			top: 38px
+			height: 130px
+			width: 130px
+			max-width: 100%
+			path
+				+mt(.5s)
+				fill: $dark !important
+		.lines
+			position: absolute
+			width: 300px
+			height: 300px
+			left: 4px
+			top: -35px
+		.face-boy
+			position: absolute
+			left: 183px
+			top: 190px
+			height: 35px
+			width: 35px
+		.face-girl
+			position: absolute
+			left: 0px
+			top: 190px
+			height: 35px
+			width: 35px
+		.responsive-img
+			margin-top: 10px
+			max-width: none
+			width: 230px
+
+	margin-top: 30px
+	width: 250px
+	height: 460px
+	+mt(.5s)
+	padding: 15px
+	border-radius: 130px
+	box-shadow: $dark 0 5px
+	text-align: center
+	&:hover
+		.cat-it-wr
+			margin-bottom: 40px
+			border-radius: 100px
+			box-shadow: $accentContrast 0 2px
+		.button
+			background-color: lighten($accent, 3%)
+			box-shadow: 0px 4px darken($accent, 5%)
+			color: #fff
+			&:active, &:focus
+				background-color: darken($accent, 6%)
+				box-shadow: 0px 4px darken($accent, 6%)
+		box-shadow: $accentContrast 0 0 0 5px
+		.car-img-wrap
+			.figure
+				path
+					fill: $accent !important
+			.lines
+				path
+					fill: $accentContrast !important
+			.face-boy
+				path
+					fill: $accentContrast !important
+			.face-girl
+				path
+					fill: $accentContrast !important
+		h3
+			&::before
+				background-color: $accentContrast
+				width: 40%
+				margin-left: -20%
+		.s-collections
+			.dec
+				width: 60%
+				background-color: $accentContrast
+	h3
+		font-family: "OpenSansRegular", sans-serif
+		vertical-align: top
+		margin-top: 10px
+		margin-bottom: 20px
+		padding-bottom: 10px
+		position: relative
+		&::before
+			+mt(.5s)
+			content: ''
+			position: absolute
+			bottom: 0
+			height: 1px
+			width: 20%
+			left: 50%
+			margin-left: -10%
+			background-color: $dark
+.carousel-brands		
+	position: relative
+	padding: 0 40px 70px
+	.owl-nav
+		position: absolute
+		top: 35%
+		left: 0
+		width: 100%
+		> button
+			position: absolute
+			left: 30px
+			&:hover
+				i
+					color: $accentContrast
+			i
+				font-size: em(50)
+				color: $dark
+				+mt(.3s)
+			&.owl-next
+				right: 30px
+				left: auto
+	.owl-dots
+		margin-top: 20px
+		text-align: center
+		.owl-dot
+			width: 12px
+			height: 12px
+			background-color: $dark
+			border-radius: 3em
+			margin: 3px
+			&.active
+				background-color: $accent
+.owl-item
+	margin-bottom: 20px
+
+.h3-catalog
+	padding-top: 60px
+	margin-bottom: 0px
+	text-align: center
+	font-size: em(34)
+	color: #333
+
+.cat-it-wr
+	margin-bottom: 100px
+	border-radius: 100px
+	box-shadow: 3px 4px 8px 3px rgba(89, 37, 74, 0.5)
+	
+//ALWAYS END
+@import "media"
+@import app/libs/owlCarousel/assets/owl.carousel.sass

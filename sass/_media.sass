@@ -1,0 +1,176 @@
+@import "bourbon"
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.header-content
+		.responsive-img
+			width: auto
+			max-width: 100%
+	.phone
+		padding-right: 50px
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.inf-2-block
+		h2
+			font-size: em(32)
+			padding-top: 0px
+			padding-bottom: 0px
+		ul.home-list
+			li
+				font-size: em(16)
+				span
+					display: none
+			i
+				font-size: em(17)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+
+	.mnu-line
+		text-align: center
+		.logo
+			display: inline-block
+		.phone
+			text-align: center
+			padding-right: 0
+	.ishome h1
+		font-size: em(30)
+	.header-content
+		padding: 10% 0 0% 
+		text-align: center
+		ul
+			li
+				font-size: em(16)
+				font-family: "OpenSansRegular"
+		.vk
+			margin-top: 8%
+		.fab
+			font-size: em(25)
+		.links
+			font-size: em(25)
+	.s-adv-item
+		text-align: center
+	
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.carousel-brands	
+		padding: 0 20px 40px	
+		.owl-nav
+			display: none
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
+/*Custom head triangle + adv*/
+@media only screen and (max-width : 652px)	
+	.triangle-tech
+		display: none
+	.s-adv
+		padding: 35px 150px 5px
+
+/*Custom adv*/
+@media only screen and (max-width : 538px)	
+	.s-adv
+		padding: 35px 100px 5px
+
+/*Custom adv*/
+@media only screen and (max-width : 452px)	
+	.s-adv
+		padding: 35px 60px 5px
+		
+/*Custom adv*/
+@media only screen and (max-width : 350px)	
+	.s-adv
+		padding: 35px 40px 5px
+
+/* Custom expert*/
+@media only screen and (max-width : 766px)
+	.inf-2-block
+		h2
+			font-size: em(30)
+			padding-top: 20px
+
+/*Custom popup*/
+@media only screen and (max-width : 766px)	
+ .product-popup
+		padding-top: 20px
+		padding-bottom: 0px
+		.inf
+			margin-bottom: 0px
+		.col-sm-4
+			display: inline-block
+			text-align: center
+		.p-text
+			.col-sm-4
+				margin-bottom: 10px
+			padding-bottom: 15px	
+			font-size: em(19)
+			line-height: em(24)
+			padding: 0 7px 0 0
+			br
+				display: none
+		h2
+			width: 100%
+			font-size: em(30)
+			line-height: em(16)
+			margin-top: 20px
+			margin-bottom: 20px
+			text-align: center
+/*Custom popup*/
